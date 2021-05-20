@@ -26,7 +26,8 @@ class Observer {
     }
   }
 }
+const observer = new Observer();
 
 module.exports = {
-  observer: new Observer(),
+  observer,
 };
