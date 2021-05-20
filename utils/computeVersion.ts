@@ -27,6 +27,4 @@ const computedVersion = (
   return computed(maxLength - 1, firstList, lastList) === operator;
 };
 
-console.log(computedVersion("4.1.2.1.3", ">", "4.1.2.1.31"));
-
 export default computedVersion;
