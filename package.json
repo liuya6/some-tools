@@ -1,11 +1,11 @@
 {
-  "name": "some-tools",
-  "version": "1.0.0",
+  "name": "some-tools-npm",
+  "version": "0.0.2",
   "description": "几个简单的js方法",
-  "main": "index.ts",
+  "main": "lib/index.js",
   "scripts": {
-    "dev": "webpack server",
-    "build": "webpack",
+    "dev": "webpack server --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "liuyaquan",
