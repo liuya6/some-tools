@@ -1,6 +1,6 @@
 {
   "name": "some-tools-npm",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "几个简单的js方法",
   "main": "lib/index.js",
   "scripts": {
