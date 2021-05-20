@@ -1,5 +1,3 @@
-import computedVersion from './utils/computeVersion'
+import computedVersion from "./utils/computeVersion";
 
-export  {
-  computedVersion
-}
+export { computedVersion };

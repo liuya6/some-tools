@@ -1,12 +1,16 @@
-const path = require('path');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const path = require("path");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+// const { HotModuleReplacementPlugin }  = require('webpack')
 
 module.exports = {
-  mode:'production',
-  entry: path.join(__dirname,'./main.ts'),
+  // mode:'development',
+  mode: "production",
+  entry: path.join(__dirname, "./main.ts"),
   output: {
-    path: path.join(__dirname,'dist'),
-    filename: "main.[contenthash:8].js"
+    path: path.join(__dirname, "lib"),
+    filename: "main.js",
   },
   resolve: {
     extensions: [".ts"],
@@ -14,14 +18,27 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.ts$/,
-        use: ['babel-loader']
-      }
-    ]
+        test: /\.(js|ts)$/,
+        exclude: /node_modules/,
+        use: "babel-loader",
+      },
+    ],
   },
   plugins: [
-    new CleanWebpackPlugin()
-  ]
-}
+    new CleanWebpackPlugin(),
 
+    // new HtmlWebpackPlugin({
+    //   template: path.join(__dirname,'index.html'),
+    //   filename: 'index.html'
+    // }),
 
+    // new HotModuleReplacementPlugin()
+  ],
+
+  // devServer: {
+  //   port: 8080,
+  //   open: true,
+  //   hot: true,
+  //   compress: true
+  // }
+};
