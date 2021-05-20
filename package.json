@@ -2,7 +2,7 @@
   "name": "some-tools",
   "version": "1.0.0",
   "description": "几个简单的js方法",
-  "main": "main.ts",
+  "main": "index.ts",
   "scripts": {
     "dev": "webpack server",
     "build": "webpack",

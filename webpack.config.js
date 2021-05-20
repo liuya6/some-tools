@@ -7,10 +7,10 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 module.exports = {
   // mode:'development',
   mode: "production",
-  entry: path.join(__dirname, "./main.ts"),
+  entry: path.join(__dirname, "./index.ts"),
   output: {
     path: path.join(__dirname, "lib"),
-    filename: "main.js",
+    filename: "index.js",
   },
   resolve: {
     extensions: [".ts"],
