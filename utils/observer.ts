@@ -28,6 +28,4 @@ class Observer {
 }
 const observer = new Observer();
 
-module.exports = {
-  observer,
-};
+export { observer };

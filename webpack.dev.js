@@ -1,15 +1,10 @@
 const path = require("path");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { HotModuleReplacementPlugin } = require("webpack");
 
 module.exports = {
   mode: "development",
   entry: path.join(__dirname, "./index.ts"),
-  output: {
-    path: path.join(__dirname, "lib"),
-    filename: "index.js",
-  },
   module: {
     rules: [
       {
@@ -20,8 +15,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new CleanWebpackPlugin(),
-
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "index.html"),
       filename: "index.html",
@@ -29,6 +22,10 @@ module.exports = {
 
     new HotModuleReplacementPlugin(),
   ],
+
+  resolve: {
+    extensions: [".ts", ".js"],
+  },
 
   devServer: {
     port: 2021,

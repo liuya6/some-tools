@@ -27,6 +27,4 @@ const computedVersion = (
   return computed(maxLength - 1, firstList, lastList) === operator;
 };
 
-module.exports = {
-  computedVersion,
-};
+export { computedVersion };
