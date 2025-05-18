@@ -21,7 +21,7 @@ somTools.computedVersion("4.1.2.1.3", ">", "4.1.2.1.31")
 >3个参数都是String 版本号格式 0.0.0
 
 ### 2 observer
- 类似于vue的$on $emit $off 短小精干
+ 类似于vue的$on $emit $off 
 
 ```js
 somTools.observer.$on("say", (message) => {
